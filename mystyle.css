@@ -6,6 +6,9 @@ h1 {
   color: navy;
   margin-left: 20px;
 }
-#2 {
+#myId {
   background-color: yellow;
+  color: black;
+  padding: 40px;
+  text-align: center;
 }
