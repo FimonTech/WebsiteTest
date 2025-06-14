@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Important Issue Brochure</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .top-bar {
+        background-color: #111;
+        color: white;
+        padding: 1em;
+      }
+
+      .layout {
+        display: flex;
+        min-height: 80vh;
+      }
+
+      .side-menu {
+        width: 200px;
+        background: #eee;
+        padding: 1em;
+        border-right: 1px solid #ccc;
+      }
+
+      .side-menu button {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        background: white;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 1em;
+      }
+
+      .bottom-bar {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+        background: #f2f2f2;
+        border-top: 1px solid #ccc;
+      }
+
+      .bottom-bar button {
+        padding: 0;
+        border: none;
+        background: none;
+        color: #333;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        }
+
+      .bottom-bar button:hover {
+        text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function BrochureHome() {
+        return (
+          <div className="main-container">
+            <div className="top-bar">
+              <h1>Important Issue</h1>
+            </div>
+
+            <div className="layout">
+              <nav className="side-menu">
+                <button>Section 1</button>
+                <button>Section 2</button>
+                <button>Section 3</button>
+              </nav>
+
+              <main className="main-content">
+                <h2>Welcome</h2>
+                <p>This site is a digital brochure highlighting an important issue. Explore the menu to learn more.</p>
+              </main>
+            </div>
+
+            <div className="bottom-bar">
+              <button>About</button>
+              <button>Contact</button>
+              <button>Credits</button>
+            </div>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<BrochureHome />);
+    </script>
+  </body>
+</html>

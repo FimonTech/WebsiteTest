@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridge Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" />
+    <style>
+    @keyframes flyInTop {
+        0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+    .animate-fly-in-top {
+        animation: flyInTop 1s ease-out forwards;
+    }
+    @keyframes Appear {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    .animate-appear {
+        animation: Appear 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    .animate-fadeIn {
+        animation: fadeIn 0.7s ease-in-out forwards;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity:1;
+        }
+        100% {
+            opacity:0;
+        }
+    }
+    .animate-fadeOut {
+        animation: fadeOut 0.7s ease-in-out forwards;
+    }
+    </style>
+    
+    <style>
+    .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    }
+
+    .slide-active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 10;
+    }
+
+    .slide-prev {
+    transform: translateX(-100%);
+    }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Main screen with background image -->
+    <div id="mainScreen" class="view h-screen bg-[url('bridge_GPT.png')] bg-cover bg-no-repeat 
+                bg-[position:center_20%] animate-fadeIn">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-center">
+            <div class="flex items-center animate-fly-in-top">
+                <div class="absolute right-[20%] text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>Bridge</div>
+                    <div>Project</div>
+                </div>
+            </div>
+        
+            <div class="absolute bottom-0 right-0 bg-red-400 text-black p-3 w-[30%] shadow-lg animate-appear">
+                <h3 class="font-bold uppercase mb-2">On Gender studies</h3>
+                <div id="slides" class="relative min-h-[4rem] overflow-hidden">
+                    <p class="slide slide-active text-white text-sm">Gender is ubuitous and ever-existing. 
+                    Even in places where it is not considered, it plays a significant role.
+                    </p>
+                    <p class="slide text-white text-sm">In places, where freedom is under constant attack, it is 
+                    all more relevant to speak out and to show that support exists. 
+                    </p>
+                    <p class="slide text-white text-sm">So please, feel free to examine this website, and learn
+                    all about gender issues in the large country far up North, Russian Federation. 
+                    </p>
+                    <p class="slide text-white text-sm">Click on the menu button on the top-left of the screen 
+                        to learn more.
+                    </p>
+                </div>
+                <div class="flex justify-end gap-2 mt-4">
+                    <button id="prevBtn" class="hover:text-red-600 disabled:text-gray-400 transition">←</button>
+                    <button id="nextBtn" class="hover:text-red-600 disabled:text-gray-400 transition">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview screen-->
+    <div id="overviewScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>How it all</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview screen-->
+    <div id="historyScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>History</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview screen-->
+    <div id="nowScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>Now</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview screen-->
+    <div id="warScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>War</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search and share -->
+    <div class="absolute top-4 right-4 flex gap-4 text-white text-2xl">
+        <!--i id="searchBtn" class="ph ph-magnifying-glass cursor-pointer hover:text-red-300"></i-->
+        <i id="shareBtn" class="ph ph-share-network cursor-pointer hover:text-red-300"></i>
+    </div>
+    <div id="sharePanel" class="hidden fixed top-12 right-4 bg-gray-900 text-white p-4 shadow-lg w-48">
+        <p class="mb-2 font-semibold">Share this page:</p>
+        <button id="copyLinkBtn" class="w-full bg-red-400 text-black py-1 rounded hover:bg-purple-600 transition">
+            Copy Link
+        </button>
+    </div>
+
+    <!-- Main menu -->
+    <div id="menuWrapper" class="group fixed top-6 left-2 bg-gray-800 bg-opacity-30 text-white p-2 shadow-lg
+            transition-all duration-300 ease-in-out
+            w-12 h-11 hover:w-48 hover:h-[75%]
+            overflow-hidden flex flex-col gap-4">
+        <div class="group flex items-center justify-center h-6 w-full cursor-pointer">
+            <!-- Hamburger lines container -->
+            <div class="flex flex-col justify-center items-center space-y-2">
+                <div class="w-8 h-0.5 bg-gray-600 transition group-hover:bg-gray-300"></div>
+                <div class="w-8 h-0.5 bg-gray-600 transition group-hover:bg-gray-300"></div>
+                <div class="w-8 h-0.5 bg-gray-600 transition group-hover:bg-gray-300"></div>
+            </div>
+        </div>
+        <nav id="menu" class="flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-1">
+            <a href="#" id="overview" onClick="switchToView('overviewScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Overview</a>
+            <a href="#" id="history" onclick="switchToView('historyScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">History</a>
+            <a href="#" id="now" onclick="switchToView('nowScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Now</a>
+            <a href="#" id="war" onclick="switchToView('warScreen')" class="group block w-full text-sm py-3 px-2 transition">
+                <span class="block bg-gradient-to-b from-blue-600 to-yellow-600 bg-clip-text text-transparent hover:text-white">
+                    War
+                </span>
+            </a>
+            <a href="#" id="gallery" onclick="switchToView('galleryScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Gallery</a>
+            <a href="#" id="learn" onclick="switchToView('learnScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Learn More</a>
+            <a href="#" id="about" onclick="switchToView('aboutScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">About</a>
+            <a href="#" id="help" onclick="switchToView('helpScreen')" class="block text-sm hover:text-red-300 py-3 px-2">There is help</a>
+        </nav>
+    </div>
+</body>
+
+<script>
+  const shareBtn = document.getElementById('shareBtn');
+  const sharePanel = document.getElementById('sharePanel');
+  const copyLinkBtn = document.getElementById('copyLinkBtn');
+
+  shareBtn.addEventListener('click', () => {
+    sharePanel.classList.toggle('hidden');
+  });
+
+  copyLinkBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copyLinkBtn.textContent = 'Copied!';
+      setTimeout(() => copyLinkBtn.textContent = 'Copy Link', 2000);
+    } catch {
+      copyLinkBtn.textContent = 'Failed to copy';
+    }
+  });
+
+  // Optional: close panel if click outside
+  window.addEventListener('click', e => {
+    if (!sharePanel.contains(e.target) && e.target !== shareBtn) {
+      sharePanel.classList.add('hidden');
+    }
+  });
+</script>
+<script>
+    function generateFader(elem) {
+        var t = null, goal, current = 0, inProgress = 0;
+        if (!elem || elem.nodeType !== 1) throw new TypeError('Expecting input of Element');
+        function visible(e) {
+            var s = window.getComputedStyle(e);
+            return +!(s.display === 'none' || s.opacity === '0');
+        }
+        function fader(duration) {
+            var step, aStep, fn, thisID = ++current, vis = visible(elem);
+            window.clearTimeout(t);
+            if (inProgress) goal = 1 - goal; // reverse direction if there is one running
+            else goal = 1 - vis;             // else decide direction
+            if (goal) {                      // make sure visibility settings correct if hidden
+                if (!vis) elem.style.opacity = '0';
+                elem.style.display = 'block';
+            }
+            step = goal - +window.getComputedStyle(elem).opacity;
+            step = 20 * step / duration;     // calculate how much to change by every 20ms
+            if (step >= 0) {                 // prevent rounding issues
+                if (step < 0.0001) step = 0.0001;
+            } else if (step > -0.0001) step = -0.0001;
+            aStep = Math.abs(step);          // cache
+            fn = function () {
+                // console.log(step, goal, thisID, current); // debug here
+                var o = +window.getComputedStyle(elem).opacity;
+                if (thisID !== current) return;
+                if (Math.abs(goal - o) < aStep) {            // finished
+                    elem.style.opacity = goal;
+                    if (!goal) elem.style.display = 'none';
+                    inProgress = 0;
+                    return;
+                }
+                elem.style.opacity = (o + step).toFixed(5);
+                t = window.setTimeout(fn, 20);
+            }
+            inProgress = 1; // mark started
+            fn();           // start
+        }
+        return fader;
+    }   
+    window.addEventListener(
+        'load',
+        function () {
+            var fader = generateFader(document.getElementById('menu'));
+            document.getElementById('menuWrapper').addEventListener(
+                'mouseenter',
+                function () {
+                    fader(100);
+                }
+            );
+            document.getElementById('menuWrapper').addEventListener(
+                'mouseleave',
+                function () {
+                    fader(0);
+                }
+            );
+            
+        }
+    );
+</script>
+
+    <script>
+        const slides = document.querySelectorAll('#slides p');
+        let currentSlide = 0;
+        let intervalId;
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('slide-active', 'slide-prev');
+
+            if (i === index) {
+            slide.classList.add('slide-active');
+            } else if (i === (index - 1 + slides.length) % slides.length) {
+            slide.classList.add('slide-prev');
+            }
+        });
+        document.getElementById('prevBtn').disabled = index === 0;
+        document.getElementById('nextBtn').disabled = index === slides.length - 1;
+        }
+
+        function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+        }
+
+        function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextSlide, 8000);
+        }
+
+        // Buttons
+        document.getElementById('nextBtn').addEventListener('click', () => {
+        nextSlide();
+        resetInterval();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+        resetInterval();
+        });
+
+        // Init
+        showSlide(currentSlide);
+        intervalId = setInterval(nextSlide, 8000);
+    </script>
+
+    <script>
+        function switchToView (idToShow) {
+            document.querySelectorAll('.view').forEach(view => {
+                if (view.id !== idToShow && !view.classList.contains('hidden')) {
+                    // Hide views that are not the target
+                    if (view.classList.contains('animate-fadeIn')) {
+                        view.classList.remove('animate-fadeIn');
+                    }
+                    view.classList.add('animate-fadeOut')
+                    // Wait for fade-out to finish before hiding completely
+                    setTimeout(() => {
+                        view.classList.add('hidden');
+                    }, 700); // Match  transition duration
+                } else if (view.id === idToShow) {
+                    // After fade out is done, hide it and fade in the second
+                    if (view.classList.contains('animate-fadeOut')) {
+                        view.classList.remove('animate-fadeOut');
+                    }
+                    setTimeout(() => {
+                        view.classList.remove('hidden');
+                        view.classList.add('animate-fadeIn');
+                    }, 700); // I have no idea why this delay is needed, nevermind          
+                }
+            });
+        };
+    </script>
+</html>
