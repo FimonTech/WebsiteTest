@@ -91,58 +91,59 @@
                 </div>
             </div>
         
-            <div class="absolute bottom-0 right-0 bg-red-400 text-black p-3 w-[30%] shadow-lg animate-appear">
-                <h3 class="font-bold uppercase mb-2">On Gender studies</h3>
+            <div class="absolute bottom-0 right-0 bg-red-400 text-black p-3 w-[40%] shadow-lg animate-appear">
+                <h3 class="font-bold uppercase mb-2 text-xl">On Gender studies</h3>
                 <div id="slides" class="relative min-h-[4rem] overflow-hidden">
-                    <p class="slide slide-active text-white text-sm">Gender is ubuitous and ever-existing. 
+                    <p class="slide slide-active text-white text-base">Gender is ubuitous and ever-existing. 
                     Even in places where it is not considered, it plays a significant role.
                     </p>
-                    <p class="slide text-white text-sm">In places, where freedom is under constant attack, it is 
+                    <p class="slide text-white text-base">In places, where freedom is under constant attack, it is 
                     all more relevant to speak out and to show that support exists. 
                     </p>
-                    <p class="slide text-white text-sm">So please, feel free to examine this website, and learn
+                    <p class="slide text-white text-base">So please, feel free to examine this website, and learn
                     all about gender issues in the large country far up North, Russian Federation. 
                     </p>
-                    <p class="slide text-white text-sm">Click on the menu button on the top-left of the screen 
+                    <p class="slide text-white text-base">Click on the menu button on the top-left of the screen 
                         to learn more.
                     </p>
                 </div>
-                <div class="flex justify-end gap-2 mt-4">
-                    <button id="prevBtn" class="hover:text-red-600 disabled:text-gray-400 transition">←</button>
-                    <button id="nextBtn" class="hover:text-red-600 disabled:text-gray-400 transition">→</button>
+                <div class="flex justify-center gap-2 mt-4">
+                    <button id="prevBtn" class="text-[2rem] hover:text-red-600 disabled:text-gray-400 transition">←</button>
+                    <button id="nextBtn" class="text-[2rem] hover:text-red-600 disabled:text-gray-400 transition">→</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Overview screen-->
-    <div id="overviewScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+    <div id="overviewScreen" class="view h-screen w-screen bg-[url('russia_map.gif')] bg-[position:center_40%] bg-cover bg-no-repeat hidden">
         <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
-            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+            <div class="flex items-center space-x-8 p-5 ml-[15%] w-full">
                 <!-- Large text on the right -->
                 <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
                     <div>How it all</div>
                     <div>Begins</div>
                 </div>
                 <!-- Small text on the right -->
-                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
-                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                <div class="text-[1rem] overflow-y-auto max-h-[25rem] text-black bg-blue-200 p-3 max-w-[60%] break-words gap-2">
+                    <div class="py-1">The goal of this website is to discuss feminism and gender rights in Russia. 
                         For a country with a long and complex history, there always is a long and complicated story of treatment of 
-                        women, minorities, 
+                        women, minorities, and LGBTQ community.
                     </div>
-                    <div class="py-0.5">Small text here</div>
-                    <div class="py-0.5">Small text here</div>
-                    <div class="py-0.5">Small text here</div>
-                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
-                    <div class="py-0.5">Small text here</div>
-                    <div class="py-0.5">Small text here</div>
-                    <div class="py-0.5">Small text here</div>
+                    <div class="py-1">The topics discussed here intersect and intertwine, and each of them deserves a separate discussion.
+                        The goal of this website is not to create an exhaustive list, but rather create interest spark interest in readers.
+                        Our goal is to show the diversity and struggle of communities in Russia, and although in many cases the story behind it is 
+                        sad and discouraging, we believe the history can change it, and our action is directed to help this change.
+                    </div>
+                    <div class="py-1">Please feel free to explore the sections of the website in any order, as well as share the link to the 
+                        website with anyone you would like to share it. You can do it using the the "share" icon on the top-right of the screen.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Overview screen-->
+    <!-- History screen-->
     <div id="historyScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
         <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
             <div class="flex items-center space-x-8 p-6 ml-[15%]">
@@ -169,7 +170,7 @@
         </div>
     </div>
 
-    <!-- Overview screen-->
+    <!-- Now screen-->
     <div id="nowScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
         <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
             <div class="flex items-center space-x-8 p-6 ml-[15%]">
@@ -196,8 +197,116 @@
         </div>
     </div>
 
-    <!-- Overview screen-->
+    <!-- War screen-->
     <div id="warScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>War</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery screen-->
+    <div id="galleryScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>War</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Learn more screen-->
+    <div id="learnScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>War</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about screen-->
+    <div id="aboutScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
+        <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
+            <div class="flex items-center space-x-8 p-6 ml-[15%]">
+                <!-- Large text on the right -->
+                <div class="text-white font-bold text-[5rem] leading-none uppercase tracking-tight">
+                    <div>War</div>
+                    <div>Begins</div>
+                </div>
+                <!-- Small text on the right -->
+                <div class="text-[1rem] text-black bg-blue-300 p-3 max-w-[90vw] w-full sm:w-[30rem] break-words gap-2">
+                    <div class="py-0.5">The goal of this website is to discuss feminism and gender rights in Russia. 
+                        For a country with a long and complex history, there always is a long and complicated story of treatment of 
+                        women, minorities, 
+                    </div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">There are many stories that are told, and many more yet to come. Anyway, this is a long text.</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                    <div class="py-0.5">Small text here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help screen-->
+    <div id="helpScreen" class="view h-screen bg-[url('bridge.png')] bg-cover bg-no-repeat hidden">
         <div class="h-full w-full bg-black bg-opacity-80 flex items-center justify-start">
             <div class="flex items-center space-x-8 p-6 ml-[15%]">
                 <!-- Large text on the right -->
@@ -226,7 +335,7 @@
     <!-- Search and share -->
     <div class="absolute top-4 right-4 flex gap-4 text-white text-2xl">
         <!--i id="searchBtn" class="ph ph-magnifying-glass cursor-pointer hover:text-red-300"></i-->
-        <i id="shareBtn" class="ph ph-share-network cursor-pointer hover:text-red-300"></i>
+        <i id="shareBtn" class="ph ph-share-network cursor-pointer text-4xl text-red-300 hover:text-purple-500"></i>
     </div>
     <div id="sharePanel" class="hidden fixed top-12 right-4 bg-gray-900 text-white p-4 shadow-lg w-48">
         <p class="mb-2 font-semibold">Share this page:</p>
@@ -238,7 +347,7 @@
     <!-- Main menu -->
     <div id="menuWrapper" class="group fixed top-6 left-2 bg-gray-800 bg-opacity-30 text-white p-2 shadow-lg
             transition-all duration-300 ease-in-out
-            w-12 h-11 hover:w-48 hover:h-[75%]
+            w-12 h-11 hover:w-[20%] hover:h-[80%]
             overflow-hidden flex flex-col gap-4">
         <div class="group flex items-center justify-center h-6 w-full cursor-pointer">
             <!-- Hamburger lines container -->
@@ -249,18 +358,18 @@
             </div>
         </div>
         <nav id="menu" class="flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-1">
-            <a href="#" id="overview" onClick="switchToView('overviewScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Overview</a>
-            <a href="#" id="history" onclick="switchToView('historyScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">History</a>
-            <a href="#" id="now" onclick="switchToView('nowScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Now</a>
-            <a href="#" id="war" onclick="switchToView('warScreen')" class="group block w-full text-sm py-3 px-2 transition">
+            <a href="#" id="overview" onClick="switchToView('overviewScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">Overview</a>
+            <a href="#" id="history" onclick="switchToView('historyScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">History</a>
+            <a href="#" id="now" onclick="switchToView('nowScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">Now</a>
+            <a href="#" id="war" onclick="switchToView('warScreen')" class="group block w-full text-base uppercase py-3 px-2 transition">
                 <span class="block bg-gradient-to-b from-blue-600 to-yellow-600 bg-clip-text text-transparent hover:text-white">
                     War
                 </span>
             </a>
-            <a href="#" id="gallery" onclick="switchToView('galleryScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Gallery</a>
-            <a href="#" id="learn" onclick="switchToView('learnScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">Learn More</a>
-            <a href="#" id="about" onclick="switchToView('aboutScreen')" class="block text-sm text-neutral-400 py-3 px-2 hover:text-white">About</a>
-            <a href="#" id="help" onclick="switchToView('helpScreen')" class="block text-sm hover:text-red-300 py-3 px-2">There is help</a>
+            <a href="#" id="gallery" onclick="switchToView('galleryScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">Gallery</a>
+            <a href="#" id="learn" onclick="switchToView('learnScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">Learn More</a>
+            <a href="#" id="about" onclick="switchToView('aboutScreen')" class="block text-base uppercase text-neutral-400 py-3 px-2 hover:text-white">About</a>
+            <a href="#" id="help" onclick="switchToView('helpScreen')" class="block text-base uppercase hover:text-red-300 py-3 px-2">There is help</a>
         </nav>
     </div>
 </body>
